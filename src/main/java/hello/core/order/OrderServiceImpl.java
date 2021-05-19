@@ -3,41 +3,44 @@ package hello.core.order;
 import hello.core.discount.DiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
 
 //    private final MemberRepository memberRepository = new MemoryMemberRepository();
 //    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
 //    private final DiscountPolicy discountPolicy = new RateDiscountPolicy();
 
-    //셍상지 주입
-//    private final MemberRepository memberRepository;
-//    private final DiscountPolicy discountPolicy;
-
     //setter 주입
-    private  MemberRepository memberRepository;
-    private  DiscountPolicy discountPolicy;
+//    private  MemberRepository memberRepository;
+//    private  DiscountPolicy discountPolicy;
 
     //filed 주입
 //    @Autowired private MemberRepository memberRepository;
 //    @Autowired private DiscountPolicy discountPolicy;
 
 
-    @Autowired
-    public void setMemberRepository(MemberRepository memberRepository) {
-        System.out.println("memberRepository = " + memberRepository);
-        this.memberRepository = memberRepository;
-    }
-    @Autowired
-    public void setDiscountPolicy(DiscountPolicy discountPolicy) {
-        System.out.println("discountPolicy = " + discountPolicy);
-        this.discountPolicy = discountPolicy;
-    }
+//    @Autowired
+//    public void setMemberRepository(MemberRepository memberRepository) {
+//        System.out.println("memberRepository = " + memberRepository);
+//        this.memberRepository = memberRepository;
+//    }
+//    @Autowired
+//    public void setDiscountPolicy(DiscountPolicy discountPolicy) {
+//        System.out.println("discountPolicy = " + discountPolicy);
+//        this.discountPolicy = discountPolicy;
+//    }
+
+    //셍상지 주입(생성자에서만 값을 넣을수 있음)
+    private final MemberRepository memberRepository;
+    private final DiscountPolicy discountPolicy;
 
 //    @Autowired //셍상자기 딱 하나 일때 autowired 생략가능
+    //@RequiredArgsConstructor로 생략가능
 //    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
 //        System.out.println("1. OrderServiceImpl");
 //        this.memberRepository = memberRepository;

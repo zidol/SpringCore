@@ -36,14 +36,15 @@ public class OrderServiceTest {
 
     @Test
     void filedInjectionTest() {
-        OrderServiceImpl orderService = new OrderServiceImpl();
+//        OrderServiceImpl orderService = new OrderServiceImpl();
 
         //필드 인젝셕을 하면 이런식으로 수정하기 위해 setter를 만들어야 하며 이럴바엔 setter인젝션을 사용한다.
-        orderService.setMemberRepository(new MemoryMemberRepository());
-        orderService.setDiscountPolicy(new FixDiscountPolicy());
+//        orderService.setMemberRepository(new MemoryMemberRepository());
+//        orderService.setDiscountPolicy(new FixDiscountPolicy());
 
         orderService.createOrder(1L, "itemA", 10000);
 
 
     }
+
 }
