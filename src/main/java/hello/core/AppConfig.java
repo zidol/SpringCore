@@ -38,8 +38,8 @@ public class AppConfig {
     //생성자 주입
     public OrderService orderService () {
         System.out.println("call AppConfig.orderService");
-//        return new OrderServiceImpl(memberRepository(), discountPolicy());
-        return null;
+        return new OrderServiceImpl(memberRepository(), discountPolicy());
+//        return null;
     }
 
     @Bean
