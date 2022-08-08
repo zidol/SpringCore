@@ -14,6 +14,8 @@ import org.springframework.context.annotation.FilterType;
 )
 public class AutoAppConfig {
 
+    //spring bootg는 application.properties에 선언 해줘야 수동이 우선권 가짐
+    // spring.main.allow-bean-definition-overriding=true //default : false
     @Bean(name = "memoryMemberRepository")//수동이 우선권을 가짐
     MemberRepository memberRepository() {
         return new MemoryMemberRepository();
