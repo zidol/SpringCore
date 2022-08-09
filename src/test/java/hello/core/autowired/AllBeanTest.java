@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
 import java.util.Map;
@@ -48,5 +49,11 @@ public class AllBeanTest {
             DiscountPolicy discountPolicy = policyMap.get(discountCode);
             return discountPolicy.discount(member, price);
         }
+    }
+
+    @Test
+    void test() {
+        String blank = "";
+        System.out.println(StringUtils.isEmpty(blank));
     }
 }

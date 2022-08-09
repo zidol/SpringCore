@@ -14,6 +14,8 @@ import org.springframework.stereotype.Component;
 public class OrderServiceImpl implements OrderService {
 
 //    private final MemberRepository memberRepository = new MemoryMemberRepository();
+
+    //구체 클래스와 실제 코드를 의존 하고 있어서 DIP 위반
 //    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
 //    private final DiscountPolicy discountPolicy = new RateDiscountPolicy();
 
