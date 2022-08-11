@@ -15,6 +15,7 @@ public class MemberApp {
 //        MemberService memberService = appConfig.memberService();
 //        MemberService memberService = new MemberServiceImpl();
 
+        //스프링 컨테이너에서 빈으로 등록한 메서드들 관리
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
         MemberService memberService = applicationContext.getBean("memberService", MemberService.class);
 
