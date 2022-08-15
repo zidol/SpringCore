@@ -24,6 +24,7 @@ public class OrderServiceImpl implements OrderService {
 //    private  DiscountPolicy discountPolicy;
 
     //filed 주입
+    // 1. 타입매칭 , 2. 타입 매칭의 결과가 2개 이상일 때 필드명, 파라미터 명으로 빈 이름 매칭
 //    @Autowired private MemberRepository memberRepository;
 //    @Autowired private DiscountPolicy discountPolicy;
 
@@ -38,6 +39,12 @@ public class OrderServiceImpl implements OrderService {
 //        System.out.println("discountPolicy = " + discountPolicy);
 //        this.discountPolicy = discountPolicy;
 //    }
+//    @Autowired //1. @Qualifier 이름 선언한 것과 매칭, 2. 빈 이름 매칭, 3. NoSuchBeanDefinitionException 예외 발생
+//    public OrderServiceImpl(MemberRepository memberRepository, @Qualifier("fixedDiscountPolicy") DiscountPolicy discountPolicy) {
+//        this.memberRepository = memberRepository;
+//        this.discountPolicy = discountPolicy;
+//    }
+
 
     //셍상지 주입(생성자에서만 값을 넣을수 있음)
     private final MemberRepository memberRepository;
